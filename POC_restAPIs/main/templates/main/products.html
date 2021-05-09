@@ -1,0 +1,51 @@
+{% extends 'main/main.html'%}
+
+{% block content %} 
+
+<br>
+
+<div class="row">
+
+    <div class="col-md">
+        <div class="card" style="margin: 20px 20px;" >
+            <div class="card-body">
+                <h5>Products</h5>
+            </div>
+        </div>
+        <div class="card" style="margin: 20px 20px;" >   
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <th>name</th>
+                        <th>description</th>
+                        <th>category</th>
+                        <th>brand</th>
+                        <th>size</th>
+                        <th>gender</th>
+                        <th>price</th>
+                        <th>Image</th>
+                    </tr>
+                   
+                    {% for product in products %}
+                    <tr>
+                        <td>{{product.product_name}}</td>
+                        <td>{{product.description}}</td>
+                        <td>{{product.category}}</td>
+                        <td>{{product.brand}}</td>
+                        <td>{{product.size}}</td>
+                        <td>{{product.gender}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.image}}</td>
+                    </tr>
+                    {% endfor %}
+
+
+                </table>
+            </div>
+        </div>  
+    </div>
+
+</div>
+
+
+{% endblock%}

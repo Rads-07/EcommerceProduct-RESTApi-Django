@@ -1,0 +1,43 @@
+{% extends 'main/main.html'%}
+
+{% block content %} 
+    <br>
+    <div class="row">
+        <div class="col-md">
+            <div class="card" style="margin: 20px 20px;" >
+                <div class="card-body">
+                    <h5>Information About API</h5>
+                </div>
+            </div>
+
+            <div class="card" style="margin: 20px 20px;" >   
+                <div class="card-body">
+                    <table class="table">
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                        </tr>
+
+                        {% for api,value in api_urls.items%}
+
+                        <tr>
+                          <td>{{api}}</td>  
+                          <td><a href="#">{{value}} </a></td>
+
+                        </tr>
+
+                        {% endfor%}
+
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+{% endblock%}
